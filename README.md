@@ -71,7 +71,7 @@ Use HACS to search and install these helpful add-ons:
 
 ## 🌐 **🔧 ADVANCED: Set Up Remote Access**  
 - **Recommend fixing the HA IP address** before doing this!
-- Shoutout to [Cloudflare] (https://www.cloudflare.com/) for offering this free and secure solution!
+- Shoutout to [Cloudflare](https://www.cloudflare.com/) for offering this free and secure solution!
 - Follow this detailed video for remote access setup:  
 👉 [Remote Access Setup Guide](https://www.youtube.com/watch?v=JGAKzzOmvxg)  
 
