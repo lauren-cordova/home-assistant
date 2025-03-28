@@ -1,8 +1,6 @@
 # 🏡 Home Assistant Setup Guide
 
-![Home Assistant](https://upload.wikimedia.org/wikipedia/commons/9/9a/Home_Assistant_Logo.svg)
-
- This repo has notes and useful links I've accumulated over time. Sharing for anyone wanting to get into Home Assistant!
+ This repo has notes and useful links I've accumulated over time. Sharing for anyone wanting to get into [Home Assistant](https://www.home-assistant.io/)! Feel free to open an issue or submit a pull request with feedback or feature suggestions.
 
 ---
 
@@ -17,7 +15,7 @@ Follow this guide to set up your Home Assistant (HA) instance on a Raspberry Pi.
 ### 🔹 **1a. Raspberry Pi**
 - [Raspberry Pi 5 (8GB)](https://www.amazon.com/dp/B0CK2FCG1K?ref=ppx_yo2ov_dt_b_fed_asin_title) – I chose the newest model for better performance.  
 - The Raspberry Pi 4 also works well if you want to save some money.  
-- **⚠️ If you get the Pi 5, you’ll need active cooling!**  
+- **⚠️ If you get the Pi 5, it's recommended to have active cooling!**  
 
 ---
 
@@ -34,7 +32,7 @@ Follow this guide to set up your Home Assistant (HA) instance on a Raspberry Pi.
 
 ### 🔹 **1d. Case**
 - [Case with Cooling (for RP5)](https://www.amazon.com/dp/B0CTBJ42P9?ref=ppx_yo2ov_dt_b_fed_asin_title) – A case is optional but recommended for protection.  
-- **⚠️ The fans on this one are loud, but it's effective!**  
+- **⚠️ The fans on this one are loud, but it's really cute!**
 
 ---
 
@@ -73,7 +71,7 @@ Use HACS to search and install these helpful add-ons:
 
 ## 🌐 **🔧 ADVANCED: Set Up Remote Access**  
 - **Recommend fixing the HA IP address** before doing this!
-- Shoutout to Cloudflare (https://www.cloudflare.com/) for offering this free and secure solution!
+- Shoutout to [Cloudflare] (https://www.cloudflare.com/) for offering this free and secure solution!
 - Follow this detailed video for remote access setup:  
 👉 [Remote Access Setup Guide](https://www.youtube.com/watch?v=JGAKzzOmvxg)  
 
