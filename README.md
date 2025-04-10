@@ -1,6 +1,6 @@
 # 🏡 Home Assistant Setup Guide
 
- This repo has notes and useful links I've accumulated over time. Sharing for anyone wanting to get into [Home Assistant](https://www.home-assistant.io/)! Feel free to open an issue or submit a pull request with feedback or feature suggestions.
+This repo has notes and useful links I've accumulated over time. Sharing for anyone wanting to get into [Home Assistant](https://www.home-assistant.io/)! Feel free to open an issue or submit a pull request with feedback or feature suggestions.
 
  ---
 
@@ -15,7 +15,63 @@
 | **Micro SD Card** | Any standard Micro SD (16GB+ recommended).<br>Make sure to have an adapter to plug it into your computer if needed. | **~$10** |  
 | [**Raspberry Pi 5 Case**](https://www.amazon.com/dp/B0CTBJ42P9?ref=ppx_yo2ov_dt_b_fed_asin_title) | Case with cooling fan (optional but recommended).<br>⚠️ The fans on this one are loud, but it's really cute! | **~$15** |  
 
-**💡 Total Estimated Cost:** ≈ **$115**  
+**Total Estimated Cost:** ≈ **$115**
+
+### 🏡 Architecture
+
+The below is a basic representation of my Home Assitant setup. I have a router dedicated to devices that don't require internet access to keep as much activity private as possible. I also have Zwave set up and prefer that configuration to boost performance as new devices are added.
+
+```mermaid
+flowchart LR
+    PWR([🔌 Power Cord])
+    SD([💾 SD Card])
+    PI(["🍓 Raspberry Pi"])
+    ONET([🌐 Online Network Router])
+    NET([🌐 Private Network Router])
+    INET([🌐 Internet])
+    ZW(["🛰️ Z-Wave USB Stick"])
+
+    subgraph Devices [💡 Connected Devices]
+        Lights([💡 Smart Lights])
+        Switches([🎚️ Smart Switches])
+        Locks([🔐 Smart Locks])
+        Garage([🚗 Garage Door])
+        TV([📺 Smart TV])
+        HVAC([🌡️ HVAC System])
+        Smoke([🔥 Smoke Detectors])
+        Plugs([🔌 Smart Plugs])
+        Roomba([🧹 Roomba])
+    end
+
+    PWR --> PI
+    SD --> PI
+    PI --> |Ethernet| ONET
+    PI --> |Wifi| NET
+    PI --> |USB| ZW
+    ONET --> INET
+
+    ONET --> TV
+    ONET --> Roomba
+    ZW --> HVAC
+
+    NET --> Lights
+    NET --> Switches
+    ZW --> Locks
+    NET --> Garage
+    ZW --> Smoke
+    NET --> Plugs
+
+    style PWR fill:#5a7de2,stroke:#fff,stroke-width:2px,color:#fff
+    style SD fill:#5a7de2,stroke:#fff,stroke-width:2px,color:#fff
+    style PI fill:#438dd5,stroke:#fff,stroke-width:2px,color:#fff
+    style NET fill:#1168bd,stroke:#fff,stroke-width:2px,color:#fff
+    style ZW fill:#3b82f6,stroke:#fff,stroke-width:2px,color:#fff
+
+    classDef device fill:#60a5fa,stroke:#fff,stroke-width:2px,color:#fff
+    class Lights,Switches,Locks,Garage,TV,HVAC,Smoke,Plugs,Roomba device
+
+    linkStyle default stroke:#fff,stroke-width:2px
+```
 
 ---
 
