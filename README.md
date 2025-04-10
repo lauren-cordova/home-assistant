@@ -48,21 +48,21 @@ flowchart LR
 
     PWR --> PI
     SD --> PI
-    PI --> |Ethernet| ONET
-    PI --> |Wifi| NET
-    PI --> |USB| ZW
-    ONET --> INET
+    PI <--> |Ethernet| ONET
+    PI <--> |Wifi| NET
+    PI <--> |USB| ZW
+    ONET <--> |Cloudflare| INET
 
-    ONET --> TV
-    ONET --> Roomba
-    ZW --> HVAC
+    ONET <--> TV
+    ONET <--> Roomba
+    ZW <--> HVAC
 
-    NET --> Lights
-    NET --> Switches
-    ZW --> Locks
-    NET --> Garage
-    ZW --> Smoke
-    NET --> Plugs
+    NET <--> Lights
+    NET <--> Switches
+    ZW <--> Locks
+    NET <--> Garage
+    ZW <--> Smoke
+    NET <--> Plugs
 
     style PWR fill:#5a7de2,stroke:#fff,stroke-width:2px,color:#fff
     style SD fill:#5a7de2,stroke:#fff,stroke-width:2px,color:#fff
