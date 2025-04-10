@@ -25,11 +25,14 @@ The below is a basic representation of my Home Assitant setup. I have a router d
 flowchart LR
     PWR([🔌 Power Cord])
     SD([💾 SD Card])
-    PI(["🍓 Raspberry Pi"])
     ONET([🌐 Online Network Router])
     NET([🌐 Private Network Router])
     INET([🌐 Internet])
     ZW(["🛰️ Z-Wave USB Stick"])
+
+    subgraph Case [🧰 Case]
+        PI(["🍓 Raspberry Pi"])
+    end
 
     subgraph Devices [💡 Connected Devices]
         Lights([💡 Smart Lights])
