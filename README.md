@@ -38,12 +38,13 @@ flowchart LR
         Lights([💡 Smart Lights])
         Switches([🎚️ Smart Switches])
         Locks([🔐 Smart Locks])
-        Garage([🚗 Garage Door])
+        Garage([🚪 Garage Door])
         TV([📺 Smart TV])
         HVAC([🌡️ HVAC System])
         Smoke([🔥 Smoke Detectors])
         Plugs([🔌 Smart Plugs])
         Roomba([🧹 Roomba])
+        CV([🚗 Connected Vehicle])
     end
 
     PWR --> PI
@@ -55,12 +56,13 @@ flowchart LR
 
     ONET <--> TV
     ONET <--> Roomba
+    ONET <--> CV
     ZW <--> HVAC
 
     NET <--> Lights
     NET <--> Switches
     ZW <--> Locks
-    NET <--> Garage
+    ONET <--> Garage
     ZW <--> Smoke
     NET <--> Plugs
 
@@ -71,7 +73,7 @@ flowchart LR
     style ZW fill:#3b82f6,stroke:#fff,stroke-width:2px,color:#fff
 
     classDef device fill:#60a5fa,stroke:#fff,stroke-width:2px,color:#fff
-    class Lights,Switches,Locks,Garage,TV,HVAC,Smoke,Plugs,Roomba device
+    class Lights,Switches,Locks,Garage,TV,HVAC,Smoke,Plugs,Roomba,CV device
 
     linkStyle default stroke:#fff,stroke-width:2px
 ```
