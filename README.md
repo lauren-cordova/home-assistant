@@ -27,7 +27,7 @@ flowchart LR
     SD([💾 SD Card])
     ONET([🌐 Online Network Router])
     NET([🌐 Private Network Router])
-    INET([🌐 Internet])
+    INET([🌐 Modem/Internet])
     ZW(["🛰️ Z-Wave USB Stick"])
 
     subgraph Case [🧰 Case]
@@ -52,7 +52,7 @@ flowchart LR
     PI <--> |Ethernet| ONET
     PI <--> |Wifi| NET
     PI <--> |USB| ZW
-    ONET <--> |Cloudflare| INET
+    ONET <--> |Ethernet| INET
 
     ONET <--> TV
     ONET <--> Roomba
